@@ -1,0 +1,19 @@
+{
+  "name": "food-order-app-react",
+  "version": "1.0.0",
+  "description": "Food Ordering App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mralimov/Food-Order-App-React.git"
+  },
+  "author": "Donnie Alimov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mralimov/Food-Order-App-React/issues"
+  },
+  "homepage": "https://github.com/mralimov/Food-Order-App-React#readme"
+}
