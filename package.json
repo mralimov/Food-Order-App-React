@@ -1,11 +1,15 @@
 {
   "name": "food-order-app-react",
-  "version": "1.0.0",
-  "description": "Food Ordering App",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -13,16 +17,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mralimov/Food-Order-App-React.git"
-  },
-  "author": "Donnie Alimov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mralimov/Food-Order-App-React/issues"
-  },
-  "homepage": "https://github.com/mralimov/Food-Order-App-React#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
