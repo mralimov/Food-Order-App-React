@@ -6,8 +6,15 @@ import CartContext from '../../store/cart-contex';
 const MealItem = props => {
   // const context = useContext(contextValue);
   const price = `$${props.price.toFixed(2)}`;
-
-  const addToCartHandler = amount => {};
+  const cartCtx = useContext(CartContext);
+  const addToCartHandler = amount => {
+    cartCtx.addItem({
+      id: props.id,
+      name: props.name,
+      amount: amount,
+      proce: props.price,
+    });
+  };
   return (
     <li className={styling.meal}>
       <div>
