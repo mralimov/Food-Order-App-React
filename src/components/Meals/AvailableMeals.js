@@ -26,12 +26,6 @@ const AvailableMeals = () => {
     fetchMeals();
   }, []);
 
-  // async function fetchingMealsHandler() {
-  //   try {
-  //     const response = fetch();
-  //   } catch (error) {}
-  // }
-
   const mealsList = meals.map(meal => (
     <MealItem
       id={meal.id}
