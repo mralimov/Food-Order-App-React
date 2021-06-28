@@ -39,6 +39,20 @@ const Cart = props => {
       ))}
     </ul>
   );
+
+  const modalActions = (
+    <div className={styling.actions}>
+      <button className={styling['button--alt']} onClick={props.onClose}>
+        Close
+      </button>
+      {hasItems && (
+        <button className={styling.button} onClick={orderHandler}>
+          Order
+        </button>
+      )}
+    </div>
+  );
+
   return (
     <Modal onClose={props.onClose}>
       {cartItems}
@@ -46,17 +60,8 @@ const Cart = props => {
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      {isCheckout && <Checkout />}
-      <div className={styling.actions}>
-        <button className={styling['button--alt']} onClick={props.onClose}>
-          Close
-        </button>
-        {hasItems && (
-          <button className={styling.button} onClick={orderHandler}>
-            Order
-          </button>
-        )}
-      </div>
+      {isCheckout && <Checkout onCancel={props.onClose} />}
+      {!isCheckout && modalActions}
     </Modal>
   );
 };

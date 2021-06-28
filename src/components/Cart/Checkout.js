@@ -1,6 +1,6 @@
 import React from 'react';
 import styling from './Cart.module.css';
-function Checkout() {
+function Checkout(props) {
   return (
     <form>
       <div className={styling.control}>
@@ -19,6 +19,9 @@ function Checkout() {
         <label htmlFor="name">City</label>
         <input type="text" id="city"></input>
       </div>
+      <button type="button" onClick={props.onCancel}>
+        Cancel
+      </button>
       <button>Confirm</button>
     </form>
   );
