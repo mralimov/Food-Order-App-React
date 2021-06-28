@@ -1,11 +1,11 @@
 import React from 'react';
-import styling from './Cart.module.css';
+import styling from './Checkout.module.css';
 function Checkout(props) {
   const confirmHandler = e => {
     e.prevent.default();
   };
   return (
-    <form onSubmit={confirmHandler}>
+    <form className={styling.form} onSubmit={confirmHandler}>
       <div className={styling.control}>
         <label htmlFor="name">Your Name</label>
         <input type="text" id="name"></input>
@@ -22,10 +22,12 @@ function Checkout(props) {
         <label htmlFor="name">City</label>
         <input type="text" id="city"></input>
       </div>
-      <button type="button" onClick={props.onCancel}>
-        Cancel
-      </button>
-      <button>Confirm</button>
+      <div className={styling.actions}>
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
+        <button className={styling.submit}>Confirm</button>
+      </div>
     </form>
   );
 }
