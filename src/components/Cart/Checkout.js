@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import styling from './Checkout.module.css';
 
 const isEmpty = value => value.trim() === '';
-const isNotFiveChars = value => value.trim().length !== 5;
+const isNotFiveChars = value => value.trim().length !== 6;
 function Checkout(props) {
   const [formInputsValidity, setFormInputsValidity] = useState({
     name: true,
@@ -43,6 +43,12 @@ function Checkout(props) {
     if (!formIsValid) {
       return;
     }
+    props.onConfirm({
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredCity,
+      postal: enteredPostal,
+    });
   };
   return (
     <form className={styling.form} onSubmit={confirmHandler}>
