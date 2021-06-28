@@ -15,7 +15,7 @@ function Checkout(props) {
   const postalInputRef = useRef();
   const cityInputRef = useRef();
   const confirmHandler = e => {
-    e.prevent.default();
+    e.preventDefault();
 
     const enteredName = nameInpuRef.current.value;
     const enteredStreet = streetInputRef.current.value;
