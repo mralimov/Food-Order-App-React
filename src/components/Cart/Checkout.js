@@ -1,8 +1,11 @@
 import React from 'react';
 import styling from './Cart.module.css';
 function Checkout(props) {
+  const confirmHandler = e => {
+    e.prevent.default();
+  };
   return (
-    <form>
+    <form onSubmit={confirmHandler}>
       <div className={styling.control}>
         <label htmlFor="name">Your Name</label>
         <input type="text" id="name"></input>
