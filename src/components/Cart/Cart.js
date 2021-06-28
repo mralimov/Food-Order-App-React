@@ -42,6 +42,7 @@ const Cart = props => {
     );
     setIsSubmitting(false);
     setSubmitDone(true);
+    cartCtx.clearCart();
   };
   const cartItems = (
     <ul className={styling['cart-items']}>
